@@ -1,20 +1,27 @@
 const { describe, it, before, after } = require('node:test');
 const assert = require('node:assert/strict');
 
-const { app, server } = require('../backend/server');
+const { app } = require('../backend/server');
 
 describe('Auth & Base Infrastructure Tests (Phase 1)', () => {
+  let server;
   let baseUrl;
   let authToken;
 
-  before(async () => {
-    const address = server.address();
-    const port = typeof address === 'string' ? address : address.port;
-    baseUrl = `http://127.0.0.1:${port}/api`;
+  before((t, done) => {
+    server = app.listen(0, () => {
+      const port = server.address().port;
+      baseUrl = `http://127.0.0.1:${port}/api`;
+      done();
+    });
   });
 
-  after(() => {
-    server.close();
+  after((t, done) => {
+    if (server) {
+      server.close(done);
+    } else {
+      done();
+    }
   });
 
   it('GET /api/health should return status ok', async () => {

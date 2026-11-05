@@ -41,10 +41,12 @@ app.use('/api', apiRoutes);
 // Centralized error handler
 app.use(errorHandler);
 
-// Listen on 0.0.0.0
-const server = app.listen(PORT, HOST, () => {
-  console.log(`Backend server running on http://${HOST}:${PORT}`);
-});
+let server;
+if (require.main === module) {
+  server = app.listen(PORT, HOST, () => {
+    console.log(`Backend server running on http://${HOST}:${PORT}`);
+  });
+}
 
 module.exports = { app, server };
 

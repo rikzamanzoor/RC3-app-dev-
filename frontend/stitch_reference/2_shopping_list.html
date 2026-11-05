@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "surface-container-high": "#f1e6e1", "on-background": "#1f1b18", "surface-tint": "#ae3104", "on-secondary-container": "#6f5400", "on-secondary-fixed-variant": "#5a4300", "surface-container-low": "#fcf1ec", "inverse-surface": "#352f2c", "surface": "#fff8f5", "outline": "#8d7169", "on-surface-variant": "#59413a", "on-error": "#ffffff", "primary-fixed": "#ffdbd1", "on-secondary-fixed": "#251a00", "inverse-on-surface": "#f9efe9", "surface-variant": "#ebe0db", "tertiary-container": "#a8968d", "on-tertiary": "#ffffff", "surface-bright": "#fff8f5", "surface-container-lowest": "#ffffff", "on-primary-fixed": "#3b0a00", "primary": "#ae3104", "tertiary-fixed-dim": "#d7c2b9", "secondary-container": "#fdc731", "background": "#fff8f5", "tertiary": "#6b5b54", "primary-container": "#ff6a3d", "secondary": "#775a00", "on-error-container": "#93000a", "surface-container-highest": "#ebe0db", "primary-fixed-dim": "#ffb59f", "secondary-fixed-dim": "#f4bf28", "outline-variant": "#e1bfb6", "secondary-fixed": "#ffdf98", "on-surface": "#1f1b18", "on-tertiary-container": "#3c2f28", "error-container": "#ffdad6", "on-tertiary-fixed": "#241913", "on-secondary": "#ffffff", "on-tertiary-fixed-variant": "#52443d", "surface-container": "#f7ece7", "tertiary-fixed": "#f4ded4", "surface-dim": "#e2d8d3", "error": "#ba1a1a", "on-primary": "#ffffff", "on-primary-container": "#611600", "inverse-primary": "#ffb59f", "on-primary-fixed-variant": "#862200" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-xs": "0.25rem", "space-sm": "0.5rem", "space-md": "1rem", "gutter": "1rem", "margin": "1.25rem", "space-xl": "2rem", "space-lg": "1.5rem" }, fontFamily: { "title-sm": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "display-currency": ["Plus Jakarta Sans"] }, fontSize: { "title-sm": ["16px", { lineHeight: "22px", fontWeight: "600" }], "label-sm": ["11px", { lineHeight: "14px", letterSpacing: "0.02em", fontWeight: "500" }], "headline-md": ["20px", { lineHeight: "28px", fontWeight: "700" }], "body-sm": ["13px", { lineHeight: "18px", fontWeight: "400" }], "label-lg": ["14px", { lineHeight: "20px", fontWeight: "600" }], "body-md": ["15px", { lineHeight: "22px", fontWeight: "400" }], "headline-lg": ["26px", { lineHeight: "34px", letterSpacing: "-0.01em", fontWeight: "700" }], "display-currency": ["36px", { lineHeight: "44px", letterSpacing: "-0.02em", fontWeight: "800" }] } } } }</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-margin flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="Shared Living Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Wuz2Ia2jruCPwrOyAJNVIZDhtdDZEpyHk9g-qeV3LhQyQYz45rwRTRd11-KLXGntcXN-QUB82wDnSCqJb8J03xSkx8NAPwNmSGTuGcu-9aW2mnNDWGzBru2RTp7T2fcidE9Z2MuARvWlMi5ZMMsdHa2m6xUc9QyFS4Xwmzxm0oVYkpdogK4Cfnc4AUYj_0VdGgO_h04hWdGuGVE4qKhnB1xd-sB5_bRS8RH50kkiNrIw"/><span class="font-headline-md text-headline-md text-on-surface">Shared Living</span><span class="font-title-sm text-title-sm text-on-surface-variant hidden">Shopping</span></div><div class="flex items-center gap-space-sm"><button aria-label="Notifications" class="min-w-[44px] min-h-[44px] w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors"><span class="material-symbols-outlined text-[22px]">notifications</span></button><button aria-label="Profile" class="min-w-[44px] min-h-[44px] w-11 h-11 flex items-center justify-center rounded-full"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5ieTli7fPA9VV8SF3SKYIavuBIDv6qLuFeY6MFI4FnCLEPvTRu2MpaCz0tCxjF9vHVAOZvSqTzoSMrVFobkvhJrhSuQndKUTRo8Jci8w1JslxN_jnPQt_iKapL6RbvGFcHeUsDZSM_2DiiR2uAClbygFFqukJSpvg6g_DJcKX63GpBcdPfOaWr2kB_8EghIoGavnlLhPtTP-8w65YgJG-1rrE-8-ZTBYT9p-u46mu"/></button></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-24 bg-surface"><div class="flex flex-col w-full px-margin pb-28">
+<!-- Pull-to-refresh Delight Micro-Banner -->
+<div class="flex items-center justify-center gap-space-xs py-space-sm text-tertiary">
+<span class="material-symbols-outlined text-[16px] animate-bounce text-primary">keyboard_double_arrow_down</span>
+<span class="font-label-sm text-label-sm">Pull down to refresh shared pantry</span>
+</div>
+<!-- Screen Subheader & Fast Add Trigger -->
+<div class="flex items-center justify-between mt-space-sm mb-space-lg">
+<div class="flex flex-col">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Shopping List</h1>
+<div class="flex items-center gap-1.5 mt-0.5">
+<span class="w-2 h-2 rounded-full bg-secondary-container"></span>
+<p class="font-body-sm text-body-sm text-tertiary">3 roommates sharing • 85% stocked</p>
+</div>
+</div>
+<!-- Coral Circular Add Button -->
+<button aria-label="Add shopping item" class="min-w-[48px] min-h-[48px] w-12 h-12 rounded-full bg-primary-container text-on-primary flex items-center justify-center shadow-lg shadow-primary-container/30 active:scale-95 transition-transform duration-150" id="addItemBtn">
+<span class="material-symbols-outlined text-[26px]">add</span>
+</button>
+</div>
+<!-- Roommate Shared Avatars & Summary Pills -->
+<div class="flex items-center justify-between bg-surface-container p-space-md rounded-xl mb-space-lg shadow-sm">
+<div class="flex items-center gap-space-sm">
+<div class="flex -space-x-2 overflow-hidden">
+<img class="inline-block h-8 w-8 rounded-full object-cover shadow-sm" data-alt="Warm portrait of young friendly roommate smiling outdoors with warm sunny lighting, natural coral tones, cozy aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgnvKcFbehF0oQRUQJ0A267DmcV2tHz9J17lQEH0D1T46zpDONZwN86NM_XiLDGMrZM4CFtEBXWTnkPkXdWPyz7yo7Nw4xohdmR7MKKhyAZ2-tA5aPdFNrFdxDF7D5A2jyZpR3-u9oCtKJ285RNZFSR4uVViYw35gVbWIXgfnDHopy_R69eWyS4_BYQ87TH3-E3_lwphvtHak0PGgNruigkDblXMfQAfivl4ooffsq"/>
+<img class="inline-block h-8 w-8 rounded-full object-cover shadow-sm" data-alt="Charming candid portrait of a female student roommate laughing in a bright sunlit kitchen, soft peach ambience." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDJTh3O18wFv3UJUD8BzCiVWviRfJw-mkXQRBMyL1U4vH0LKSHiqBYXr8v91xbZcN5J5YmSLJDqF7jY1or13lycPOISsmSZASQQaoRg6hlt1yClrdQMXgnyq7lN9RQAUioT4OT-7WzHU_pOQnu0k2f0p407kiDYt1KuK-q0qYg-zg7c6wgHK2SoIVSlsVoqJhKlCXl4u654TbeHU-gTgS8wLitnASxsrv6SSE77PEK"/>
+<img class="inline-block h-8 w-8 rounded-full object-cover shadow-sm" data-alt="Smiling male roommate holding groceries in a warm modern apartment interior, soft amber sunlight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWb1RxR-gOMeH9AitGgsK-mac2eYJEEa8m1hRGwf8-ZFX_YAkmLBiBi93xqYF9E-moiYCf3qUOSP1xWJRRK5XoInQPk45sy0s5IiWKYAvsacgZBPsNIMGA1akwSsvvcM6c1MwJs5QTtMfJWamsLFhK57aLjzpXlR_XiUkDak3sxQyEuBbvnRgeRMgbyVe55nEKg_932ch9Oums5cqo3uOSX_CuloDW7O6nhvdmBhor"/>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-sm text-title-sm text-on-surface leading-tight">Shared Cart</span>
+<span class="font-label-sm text-label-sm text-tertiary">Ali, Ayesha &amp; Bilal</span>
+</div>
+</div>
+<div class="flex items-center gap-1.5 bg-surface-container-lowest px-3 py-1.5 rounded-full shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-primary" style="font-variation-settings: 'FILL' 1;">local_mall</span>
+<span class="font-label-sm text-label-sm font-semibold text-primary">3 to buy</span>
+</div>
+</div>
+<!-- Section Header: To Buy -->
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-title-sm text-title-sm text-on-surface">Needs Restock</span>
+<span class="font-label-sm text-label-sm text-tertiary font-medium">Selected: <span class="text-primary font-bold" id="selectedCountText">2</span></span>
+</div>
+<!-- Shopping Items List -->
+<div class="flex flex-col gap-space-sm mb-space-xl">
+<!-- Item 1: Milk (2 dozen) - PENDING & SELECTED -->
+<div class="item-card relative flex items-center justify-between p-space-md rounded-xl bg-surface-container-lowest shadow-sm transition-all duration-200" data-price="480" data-selected="true">
+<!-- Active Highlight Glow Accent Bar -->
+<div class="absolute left-0 top-3 bottom-3 w-1 bg-primary-container rounded-r-full"></div>
+<div class="flex items-center gap-space-md min-w-0 pl-1.5">
+<!-- Coral Filled Checkbox -->
+<button aria-label="Toggle Milk selection" class="checkbox-btn min-w-[44px] min-h-[44px] flex items-center justify-center cursor-pointer" type="button">
+<div class="w-6 h-6 rounded-lg bg-primary-container text-on-primary flex items-center justify-center shadow-sm transition-all">
+<span class="material-symbols-outlined text-[18px] font-bold">check</span>
+</div>
+</button>
+<div class="flex flex-col min-w-0">
+<span class="font-title-sm text-title-sm text-on-surface truncate">Milk</span>
+<span class="font-body-sm text-body-sm text-tertiary truncate">2 dozen • Requested by Bilal</span>
+</div>
+</div>
+<!-- Amber Status Chip -->
+<div class="flex items-center gap-1 px-3 py-1.5 rounded-full bg-secondary-fixed text-on-secondary-fixed text-label-sm font-label-sm shrink-0">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>Pending</span>
+</div>
+</div>
+<!-- Item 2: Farm Eggs (1 dozen) - PENDING & SELECTED -->
+<div class="item-card relative flex items-center justify-between p-space-md rounded-xl bg-surface-container-lowest shadow-sm transition-all duration-200" data-price="320" data-selected="true">
+<!-- Active Highlight Glow Accent Bar -->
+<div class="absolute left-0 top-3 bottom-3 w-1 bg-primary-container rounded-r-full"></div>
+<div class="flex items-center gap-space-md min-w-0 pl-1.5">
+<!-- Coral Filled Checkbox -->
+<button aria-label="Toggle Eggs selection" class="checkbox-btn min-w-[44px] min-h-[44px] flex items-center justify-center cursor-pointer" type="button">
+<div class="w-6 h-6 rounded-lg bg-primary-container text-on-primary flex items-center justify-center shadow-sm transition-all">
+<span class="material-symbols-outlined text-[18px] font-bold">check</span>
+</div>
+</button>
+<div class="flex flex-col min-w-0">
+<span class="font-title-sm text-title-sm text-on-surface truncate">Farm Eggs</span>
+<span class="font-body-sm text-body-sm text-tertiary truncate">1 dozen • Requested by Ayesha</span>
+</div>
+</div>
+<!-- Amber Status Chip -->
+<div class="flex items-center gap-1 px-3 py-1.5 rounded-full bg-secondary-fixed text-on-secondary-fixed text-label-sm font-label-sm shrink-0">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>Pending</span>
+</div>
+</div>
+<!-- Item 3: Cooking Oil (1 bottle) - PENDING & UNCHECKED -->
+<div class="item-card relative flex items-center justify-between p-space-md rounded-xl bg-surface-container-lowest shadow-sm transition-all duration-200" data-price="650" data-selected="false">
+<div class="absolute left-0 top-3 bottom-3 w-1 bg-transparent rounded-r-full"></div>
+<div class="flex items-center gap-space-md min-w-0 pl-1.5">
+<!-- Unchecked White Box with Warm Outline Tint -->
+<button aria-label="Toggle Oil selection" class="checkbox-btn min-w-[44px] min-h-[44px] flex items-center justify-center cursor-pointer" type="button">
+<div class="w-6 h-6 rounded-lg bg-surface-container-high text-transparent flex items-center justify-center shadow-inner transition-all">
+<span class="material-symbols-outlined text-[18px] font-bold">check</span>
+</div>
+</button>
+<div class="flex flex-col min-w-0">
+<span class="font-title-sm text-title-sm text-on-surface truncate">Cooking Oil</span>
+<span class="font-body-sm text-body-sm text-tertiary truncate">1 bottle • Requested by Ali</span>
+</div>
+</div>
+<!-- Amber Status Chip -->
+<div class="flex items-center gap-1 px-3 py-1.5 rounded-full bg-secondary-fixed text-on-secondary-fixed text-label-sm font-label-sm shrink-0">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>Pending</span>
+</div>
+</div>
+</div>
+<!-- Section Header: Already Bought -->
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-2">
+<span class="font-title-sm text-title-sm text-tertiary">Recently Purchased</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 bg-surface-container rounded-full text-tertiary">2</span>
+</div>
+<button class="font-label-sm text-label-sm text-primary hover:underline" type="button">Clear all</button>
+</div>
+<!-- Purchased Items List (Muted & Delightfully Styled) -->
+<div class="flex flex-col gap-space-sm opacity-80">
+<!-- Item 4: Dishwashing Soap - BOUGHT -->
+<div class="flex items-center justify-between p-space-md rounded-xl bg-surface-container-low shadow-none">
+<div class="flex items-center gap-space-md min-w-0">
+<!-- Disabled Greyed Checkmark Container -->
+<div class="min-w-[44px] min-h-[44px] flex items-center justify-center">
+<div class="w-6 h-6 rounded-lg bg-surface-variant text-tertiary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">done_all</span>
+</div>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-sm text-title-sm text-tertiary line-through truncate">Dishwashing Soap</span>
+<span class="font-body-sm text-body-sm text-outline truncate">1 bottle • Bought by Ayesha</span>
+</div>
+</div>
+<!-- Fresh Green Tinted Status Chip -->
+<div class="flex items-center gap-1 px-3 py-1.5 rounded-full bg-surface-container-high text-on-surface-variant text-label-sm font-label-sm shrink-0">
+<span class="material-symbols-outlined text-[14px] text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-semibold">Bought</span>
+</div>
+</div>
+<!-- Item 5: Potato Chips - BOUGHT -->
+<div class="flex items-center justify-between p-space-md rounded-xl bg-surface-container-low shadow-none">
+<div class="flex items-center gap-space-md min-w-0">
+<!-- Disabled Greyed Checkmark Container -->
+<div class="min-w-[44px] min-h-[44px] flex items-center justify-center">
+<div class="w-6 h-6 rounded-lg bg-surface-variant text-tertiary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">done_all</span>
+</div>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-sm text-title-sm text-tertiary line-through truncate">Potato Chips</span>
+<span class="font-body-sm text-body-sm text-outline truncate">3 packs • Bought by Ali</span>
+</div>
+</div>
+<!-- Fresh Green Tinted Status Chip -->
+<div class="flex items-center gap-1 px-3 py-1.5 rounded-full bg-surface-container-high text-on-surface-variant text-label-sm font-label-sm shrink-0">
+<span class="material-symbols-outlined text-[14px] text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-semibold">Bought</span>
+</div>
+</div>
+</div>
+<!-- Shared Kitchen Note (Human Warmth State) -->
+<div class="mt-space-lg p-space-md rounded-xl bg-primary-fixed flex items-start gap-space-md">
+<div class="w-9 h-9 rounded-full bg-surface-container-lowest flex items-center justify-center shrink-0 text-primary shadow-sm">
+<span class="material-symbols-outlined text-[20px]">wb_sunny</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-on-primary-fixed">Household tip</span>
+<p class="font-body-sm text-body-sm text-on-primary-fixed-variant mt-0.5">
+        Items checked here automatically prepare split ledger receipts for dinner tonight!
+      </p>
+</div>
+</div>
+<!-- Floating Checkout Bar (Elevated Above Shell Bottom Nav) -->
+<div class="fixed bottom-20 left-0 right-0 px-margin z-40 pointer-events-none">
+<div class="max-w-md mx-auto pointer-events-auto">
+<button class="w-full min-h-[52px] h-[54px] rounded-full bg-primary-container text-on-primary font-title-sm text-title-sm flex items-center justify-between px-space-lg shadow-xl shadow-primary-container/25 active:scale-[0.98] transition-all" id="checkoutBtn">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[24px]">shopping_cart_checkout</span>
+<span id="checkoutLabel">Checkout (2 items)</span>
+</div>
+<div class="flex items-center gap-1.5 bg-surface-container-lowest/20 px-3 py-1 rounded-full backdrop-blur-sm">
+<span class="font-label-sm text-label-sm font-normal text-on-primary">Est.</span>
+<span class="font-label-lg text-label-lg font-bold text-on-primary" id="checkoutTotal">PKR 800</span>
+</div>
+</button>
+</div>
+</div>
+<!-- Interactive Add Modal / Sheet Simulation -->
+<div class="fixed inset-0 bg-inverse-surface/40 z-50 hidden items-end justify-center p-0 transition-opacity duration-200" id="addModal">
+<div class="w-full max-w-lg bg-surface-container-lowest rounded-t-3xl p-space-lg flex flex-col shadow-2xl animate-in slide-in-from-bottom duration-300">
+<div class="w-10 h-1 bg-surface-variant rounded-full mx-auto mb-space-md"></div>
+<div class="flex items-center justify-between mb-space-md">
+<h2 class="font-headline-md text-headline-md text-on-surface">Add Shared Item</h2>
+<button class="min-w-[44px] min-h-[44px] flex items-center justify-center text-tertiary hover:text-on-surface" id="closeModalBtn">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<div class="flex flex-col gap-space-md mb-space-lg">
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-tertiary">Item Name</label>
+<input class="h-12 px-4 rounded-xl bg-surface-container text-on-surface focus:outline-none focus:ring-2 focus:ring-primary-container font-body-md text-body-md placeholder:text-outline-variant" id="newItemTitle" placeholder="e.g. Sourdough Bread" type="text"/>
+</div>
+<div class="flex gap-space-sm">
+<div class="flex-1 flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-tertiary">Quantity • Unit</label>
+<input class="h-12 px-4 rounded-xl bg-surface-container text-on-surface focus:outline-none font-body-md text-body-md placeholder:text-outline-variant" id="newItemQty" placeholder="e.g. 2 loaves" type="text"/>
+</div>
+<div class="flex-1 flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-tertiary">Est. Price (PKR)</label>
+<input class="h-12 px-4 rounded-xl bg-surface-container text-on-surface focus:outline-none font-body-md text-body-md placeholder:text-outline-variant" id="newItemPrice" placeholder="250" type="number"/>
+</div>
+</div>
+</div>
+<button class="w-full h-12 rounded-full bg-primary-container text-on-primary font-title-sm text-title-sm flex items-center justify-center shadow-lg shadow-primary-container/20 active:scale-95 transition-transform" id="confirmAddBtn">
+        Add to Shared Cart
+      </button>
+</div>
+</div>
+</div>
+<script>
+  (function () {
+    const items = document.querySelectorAll('.item-card');
+    const selectedCountText = document.getElementById('selectedCountText');
+    const checkoutLabel = document.getElementById('checkoutLabel');
+    const checkoutTotal = document.getElementById('checkoutTotal');
+    const addItemBtn = document.getElementById('addItemBtn');
+    const addModal = document.getElementById('addModal');
+    const closeModalBtn = document.getElementById('closeModalBtn');
+    const confirmAddBtn = document.getElementById('confirmAddBtn');
+
+    function updateSummary() {
+      let count = 0;
+      let total = 0;
+      document.querySelectorAll('.item-card').forEach(card => {
+        if (card.getAttribute('data-selected') === 'true') {
+          count++;
+          total += parseInt(card.getAttribute('data-price') || '0', 10);
+        }
+      });
+
+      if (selectedCountText) selectedCountText.textContent = count;
+      if (checkoutLabel) checkoutLabel.textContent = `Checkout (${count} ${count === 1 ? 'item' : 'items'})`;
+      if (checkoutTotal) checkoutTotal.textContent = `PKR ${total}`;
+
+      const checkoutBtn = document.getElementById('checkoutBtn');
+      if (checkoutBtn) {
+        if (count === 0) {
+          checkoutBtn.classList.add('opacity-50', 'pointer-events-none');
+        } else {
+          checkoutBtn.classList.remove('opacity-50', 'pointer-events-none');
+        }
+      }
+    }
+
+    items.forEach(card => {
+      const toggle = card.querySelector('.checkbox-btn');
+      if (toggle) {
+        toggle.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const isSelected = card.getAttribute('data-selected') === 'true';
+          const newState = !isSelected;
+          card.setAttribute('data-selected', newState.toString());
+
+          const indicatorBar = card.querySelector('.absolute.left-0');
+          const checkIconBox = toggle.querySelector('div');
+
+          if (newState) {
+            indicatorBar.classList.remove('bg-transparent');
+            indicatorBar.classList.add('bg-primary-container');
+            checkIconBox.classList.remove('bg-surface-container-high', 'text-transparent');
+            checkIconBox.classList.add('bg-primary-container', 'text-on-primary');
+          } else {
+            indicatorBar.classList.add('bg-transparent');
+            indicatorBar.classList.remove('bg-primary-container');
+            checkIconBox.classList.add('bg-surface-container-high', 'text-transparent');
+            checkIconBox.classList.remove('bg-primary-container', 'text-on-primary');
+          }
+          updateSummary();
+        });
+      }
+    });
+
+    if (addItemBtn && addModal) {
+      addItemBtn.addEventListener('click', () => {
+        addModal.classList.remove('hidden');
+        addModal.classList.add('flex');
+      });
+    }
+
+    if (closeModalBtn && addModal) {
+      closeModalBtn.addEventListener('click', () => {
+        addModal.classList.add('hidden');
+        addModal.classList.remove('flex');
+      });
+    }
+
+    if (confirmAddBtn && addModal) {
+      confirmAddBtn.addEventListener('click', () => {
+        addModal.classList.add('hidden');
+        addModal.classList.remove('flex');
+      });
+    }
+
+    updateSummary();
+  })();
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-4px_20px_rgba(122,111,105,0.08)]" data-active-classes="bg-primary-fixed text-primary-container font-semibold"><div class="flex justify-around items-center h-16 px-margin"><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[48px] px-space-md py-space-xs rounded-full text-tertiary transition-all duration-200 hover:text-on-surface" data-path="home" href="#"><span class="material-symbols-outlined text-[24px]">home</span><span class="font-label-sm text-label-sm mt-0.5">Home</span></a><a aria-current="page" class="flex flex-col items-center justify-center min-w-[56px] min-h-[48px] px-space-md py-space-xs rounded-full transition-all duration-200 bg-primary-fixed text-primary-container font-semibold" data-path="shopping" href="#"><span class="material-symbols-outlined text-[24px]">shopping_basket</span><span class="font-label-sm text-label-sm mt-0.5">Shopping</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[48px] px-space-md py-space-xs rounded-full text-tertiary transition-all duration-200 hover:text-on-surface" data-path="expenses" href="#"><span class="material-symbols-outlined text-[24px]">receipt_long</span><span class="font-label-sm text-label-sm mt-0.5">Expenses</span></a></div></nav></body></html>

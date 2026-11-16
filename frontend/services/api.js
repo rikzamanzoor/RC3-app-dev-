@@ -1,10 +1,35 @@
 import axios from 'axios';
+import { Platform, NativeModules } from 'react-native';
 import { tokenStorage } from './tokenStorage';
 
-const BASE_URL = process.env.EXPO_PUBLIC_API_URL || 'http://localhost:3000/api';
+const getHostFromScriptURL = () => {
+  try {
+    const scriptURL = NativeModules?.SourceCode?.scriptURL;
+    if (scriptURL) {
+      const match = scriptURL.match(/^https?:\/\/([^:/]+)/);
+      if (match && match[1]) {
+        return match[1];
+      }
+    }
+  } catch (e) {
+    // ignore
+  }
+  return null;
+};
+
+export const getBaseUrl = () => {
+  if (Platform.OS === 'web' && typeof window !== 'undefined' && window.location?.hostname) {
+    return `http://${window.location.hostname}:8081/api`;
+  }
+  const host = getHostFromScriptURL();
+  if (host) {
+    return `http://${host}:8081/api`;
+  }
+  return process.env.EXPO_PUBLIC_API_URL || 'http://192.168.62.14:8081/api';
+};
 
 export const apiClient = axios.create({
-  baseURL: BASE_URL,
+  baseURL: getBaseUrl(),
   timeout: 10000,
   headers: {
     'Content-Type': 'application/json',
@@ -17,9 +42,13 @@ export function setOnUnauthorizedCallback(cb) {
   onUnauthorizedCallback = cb;
 }
 
-// Request interceptor: attach token
+// Request interceptor: attach token & ensure dynamic baseURL
 apiClient.interceptors.request.use(
   async (config) => {
+    const currentBase = getBaseUrl();
+    if (currentBase) {
+      config.baseURL = currentBase;
+    }
     const token = await tokenStorage.getToken();
     if (token) {
       config.headers.Authorization = `Bearer ${token}`;

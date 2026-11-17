@@ -25,7 +25,7 @@ export const getBaseUrl = () => {
   if (host) {
     return `http://${host}:8081/api`;
   }
-  return process.env.EXPO_PUBLIC_API_URL || 'http://192.168.62.14:8081/api';
+  return process.env.EXPO_PUBLIC_API_URL || 'http://192.168.86.14:8081/api';
 };
 
 export const apiClient = axios.create({
